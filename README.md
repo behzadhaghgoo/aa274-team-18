@@ -10,7 +10,7 @@ launch/project_sim_pose.launch: Launches gazebo with a (rough, tentative) model 
 
 launch/project_sim_nav.launch: Launches gazebo with a (rough, tentative) model of the final project environment. Uses navigator.py but you will need to add your implementation of astar.py for this to work. It goes to /cmd_nav by computing a path.
 
-robots/asl_turtlebot.urdf.xacro, turtlebot3_burger.gazebo.xacro, turtlebot3_burger.urdf.xacro: Turtlebot 3D model definitions for gazebo.
+robots/asl_turtlebot.urdf.xacro, turtlebot3_burger.gazebo.xacro, turtlebot3_burger.urdf.xacro: Turtlebot 3D model definitions for gazebo. 
 
 world/project_city.world: Defines 3D model of rough, tentative representation of the final project environment.
 
@@ -40,7 +40,7 @@ scripts/detector_viz.py: Visualizes camera feed, bounding boxes and confidence f
 
 scripts/grids.py: Used for motion planning. Performs collision checking on occupancy grids. grids.py functions/classes are used by scripts/navigator.py.
 
-scripts/keyboard_teleop.py: Alternative teleoperation to standard turtlebot3_teleop.launch.
+scripts/keyboard_teleop.py: Alternative teleoperation to standard turtlebot3_teleop.launch. 
 
 scripts/navigator.py: Path planner that will use A* implementation (to be completed as part of HW4) in an MPC framework along with cubic spline interpolation and the differential flatness controller (from HW1).
 
@@ -78,7 +78,7 @@ DetectedObject[] ob_msgs - Array of DetectedObject objects.
 
 **Tensorflow Models:**
 
-The `.pb` files in the `tfmodels` folder are "frozen" neural network models, and contain both the structure and the weights of pretrained networks. `ssd_mobilenet_v1_coco.pb` is a pretrained MobileNet v1 model, while `stop_sign_gazebo.pb` is a model fine-tuend to detect stop signs in Gazebo. We recommend using `ssd_resnet_50_fpn.pb`, which is a larger, more accurate and robust model, but does not fit on a GitHub repo and can be downloaded [here](https://stanford.box.com/s/vszjfhwkjb203qbwhzoirn3uzt5r16lv).
+The `.pb` files in the `tfmodels` folder are "frozen" neural network models, and contain both the structure and the weights of pretrained networks. `ssd_mobilenet_v1_coco.pb` is a pretrained MobileNet v1 model, while `stop_sign_gazebo.pb` is a model fine-tuend to detect stop signs in Gazebo. We recommend using `ssd_resnet_50_fpn.pb`, which is a larger, more accurate and robust model, but does not fit on a GitHub repo and can be downloaded [here](https://stanford.box.com/s/vszjfhwkjb203qbwhzoirn3uzt5r16lv). 
 
 The `coco_labels.txt` file just contains the mapping from the class number output by the model to human-interpretable labels.
 
@@ -92,3 +92,5 @@ env_pi.sh: Script to remote launch nodes on the raspberry pi from the jetson. Th
 roslocal.sh, rostb3.sh: Scripts to set your ROS IP settings.
 
 CMAkeLists.txt: Make file for the package
+
+
